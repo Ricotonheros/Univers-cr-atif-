@@ -13,6 +13,7 @@ import { CuratorialHeader } from './components/CuratorialHeader';
 import { NavigationRail } from './components/NavigationRail';
 import { IntroPrologue } from './components/IntroPrologue';
 import { OutroEpilogue } from './components/OutroEpilogue';
+import { TapNavigation } from './components/TapNavigation';
 
 export default function App() {
   const scrollToSection = useCallback((sectionId: string) => {
@@ -66,6 +67,9 @@ export default function App() {
 
       {/* 2. Rail de navigation discret sur le côté */}
       <NavigationRail sections={sections} />
+
+      {/* 2 bis. Boutons Précédent / Suivant, affichés seulement sur mobile ou écran tactile */}
+      <TapNavigation />
 
       <main className="flex-1 w-full">
         {/* 3. Prologue d'ouverture */}
