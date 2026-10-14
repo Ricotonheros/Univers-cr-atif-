@@ -7,6 +7,10 @@ Chaque scène affiche une question, la réponse de l'étudiant, puis une citatio
 - **Texte** : `src/data/sections.ts` (à ne pas modifier : ce sont les réponses de l'étudiant).
 - **Images** : `src/assets/images/` · **Musiques** : `src/assets/audio/` (voir `docs/MANIFESTE_ASSETS.md`).
 
+## Site publié
+
+La version finale (fichier autonome, musique et images intégrées) est dans `docs/index.html` et publiée avec GitHub Pages.
+
 ## Lancer
 
 ```bash
