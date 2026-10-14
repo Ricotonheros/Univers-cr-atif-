@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* Palette et polices « papier chaud et terre » : papier, encre, argile, ocre ; une serif éditoriale
+   (Newsreader) pour les textes et une sans lisible (Inter) pour l'interface. */
+@theme {
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-paper: #f7f1e8;
+  --color-paper-soft: #efe7d9;
+  --color-ink: #1c1b1a;
+  --color-clay: #6b443d;
+  --color-espresso: #39221e;
+  --color-ochre: #bc924c;
+  --color-sage: #849671;
+  --color-hairline: #e1dcd3;
+  --color-amber-100: #f4ead6;
+  --color-amber-200: #e8d6ae;
+  --color-amber-300: #d6b985;
+  --color-amber-400: #c29a5c;
+  --color-amber-500: #a87f45;
+  --color-amber-600: #8a6534;
+  --color-amber-900: #4a361c;
+}
+
+@layer base {
+  :root {
+    --header-h: 68px;
+    --font-serif: 'Newsreader', Georgia, serif;
+    --font-display: 'Newsreader', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + 16px);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-serif-body {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Fluid typography classes according to specification */
+.text-act-title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-question {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.35rem, 3.2vw, 2.25rem);
+  line-height: 1.25;
+  max-width: 34ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-answer {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * Lecture des cartes question/réponse : les textes du décor (légendes, citations, affiches) sont
+ * masqués tant que ces cartes sont affichées, pour qu'aucun texte ne se superpose. Les images,
+ * canvas et formes du décor restent visibles ; les textes reviennent quand l'univers prend la scène.
+ */
+[data-reading="true"] :where(p, h1, h2, h3, h4, h5, h6, blockquote, figcaption, li, cite, strong, em, small, span) {
+  visibility: hidden !important;
+}
+
+/* Smooth ambient lighting & text selection */
+::selection {
+  background: rgba(188, 146, 76, 0.35);
+  color: var(--color-paper);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(28, 27, 26, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(188, 146, 76, 0.5);
+}

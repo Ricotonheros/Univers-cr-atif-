@@ -1,0 +1,6 @@
+{
+  "name": "Carnavalet — Chemins d'Esprit",
+  "description": "Une expérience narrative immersive en scrollytelling explorant la création, de la chambre close de Marcel Proust aux horizons sans murs de la vie.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
