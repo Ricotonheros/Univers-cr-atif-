@@ -22,7 +22,7 @@ export const sections: SectionData[] = [
     act: 'ACTE I',
     actTitle: 'Musée Carnavalet',
     question: "Qu’est-ce que cette chambre dit de la manière dont Proust travaillait ?",
-    answer: "On est sur une personne qui cultive l'ennuie et l'enferment physique pour permettre à sont esprit de lui s'echapper et d'avoir des ailes le manque de lumiere naturel de fenetre lui montre une volonter forte presque compulsive qui la pousser à ne se consacre que à cela car l'ennuie et labsent de liberter pphysique labsence de repere temporel etait une facon pure de se devouer à sont art si pure qu'ila pu s'envoler ecrire inventer changer il acree cette environement adéquate lui permettant de stimuler sont esprit et de lui en donner des ailes",
+    answer: "On est sur une personne qui cultive l'ennuie et l'enferment physique pour permettre à sont esprit de lui s'échapper et d'avoir des ailes le manque de lumière naturel de fenêtre lui montre une volonter forte presque compulsive qui la pousser à ne se consacre que à cela car l'ennuie et labsent de liberter physique labsence de repère temporel était une façon pure de se dévouer à sont art si pure qu'ila pu s'envoler écrire inventer changer il acree cette environement adéquate lui permettant de stimuler sont esprit et de lui en donner des ailes",
     theme: "La Chambre de Liège & L'Envol de l'Esprit",
     mood: "intime, lumineuse, théâtrale, mélancolique",
     palette: {
